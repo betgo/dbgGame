@@ -1,0 +1,34 @@
+.card {
+  width: 100px;
+  display: grid;
+  grid-template-rows: 20px 90px 90px;
+  border: 1px black solid;
+  box-sizing: border-box;
+   margin: 0 2px;
+   &:hover{ color: red;}
+  .card-head {
+    font-size: 0.3em;
+    text-align: center;
+   
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .card-cost {
+    border: 1px black solid;
+    float: left;
+  }
+
+  .card-view {
+    text-align: center;
+    border: 1px black solid;
+    border-right: none;
+    border-left: none;
+    box-sizing: border-box;
+  }
+
+  .card-foot {
+    text-align: center;
+    border: 1px black solid;
+  }
+}

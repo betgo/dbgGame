@@ -1,0 +1,11 @@
+
+
+
+
+<div class="battle-view">
+    <div class="top">top</div>
+    <div class="middle">middle</div>
+    <div class="foot"  cdkDropList  (cdkDropListDropped)="drop($event)" >
+        <app-card *ngFor="let card of cards" [cardItem]="card" cdkDrag ></app-card>
+    </div>
+</div>
