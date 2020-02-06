@@ -1,11 +1,21 @@
-
-
-
-
 <div class="battle-view">
-    <div class="top">top</div>
-    <div class="middle">middle</div>
-    <div class="foot"  cdkDropList  (cdkDropListDropped)="drop($event)" >
-        <app-card *ngFor="let card of cards" [cardItem]="card" cdkDrag ></app-card>
-    </div>
+  <div class="top"  
+
+   >
+    <app-monster 
+     *ngFor="let monster of monsters;let i=index" style="height:100% " [id]="i" 
+        (mouseenter)="mouseEnter($event)" (mouseleave)="mouseLeave()"> 
+        {{monster}}
+    </app-monster
+    >
+   
+  </div>
+  <div class="middle">middle</div>
+  <div class="foot"
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListConnectedTo]="[doneList]"
+    (cdkDropListDropped)="drop($event)">
+    <app-card class="example-box" *ngFor="let card of cards" [cardItem]="card" cdkDrag></app-card>
+  </div>
 </div>

@@ -5,8 +5,12 @@
     border:1px black solid;
 
     .top{
-        height: 10em;
+        height: 12em;
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
     }
     .middle{
         height: 10em;
@@ -22,6 +26,8 @@
         align-items: flex-end;
     }
 }
+
+
 .cdk-drag-preview {
     box-sizing: border-box;
     border-radius: 4px;
@@ -37,4 +43,3 @@
   .cdk-drag-animating {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
-  

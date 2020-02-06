@@ -1,0 +1,9 @@
+.monster{
+    width: 100px;
+    height: 100%;
+    border: 1px black solid;
+    margin: 0 20px;
+    &:hover{
+        color: blue;
+    }
+}
