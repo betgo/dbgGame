@@ -2,8 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
+
+import { BattleModule } from './battle';
+import { AppRoutingModule } from './app-routing.module';
+import { MapModule } from './map';
 import { AppComponent } from './app.component';
-import {BattleModule} from './battle';
 
 @NgModule({
   declarations: [
@@ -11,7 +14,9 @@ import {BattleModule} from './battle';
   ],
   imports: [
     BrowserModule,
-    BattleModule,   
+    BattleModule,
+    MapModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

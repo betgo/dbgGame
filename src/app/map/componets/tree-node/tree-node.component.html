@@ -1,0 +1,14 @@
+<div
+  class="entry"
+  [class.sole]="nodes.length == 1"
+  *ngFor="let res of nodes"
+>
+  <span class="label">
+    
+    <span > {{ res.name }} </span>
+  </span>
+
+  <div class="branch" *ngIf="res.children?.length > 0">
+    <app-tree-node [nodes]="res.children"></app-tree-node>
+  </div>
+</div>

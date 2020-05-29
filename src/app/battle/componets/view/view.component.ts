@@ -26,7 +26,7 @@ export class ViewComponent implements OnInit {
   cards: Card[] = [];
   constructor() { }
 
-  @ViewChild('todoList', { static: false }) todolist: CdkDropList;
+  @ViewChild('todoList') todolist: CdkDropList;
 
   ngOnInit() {
     for (let index = 0; index < 6; index++) {
