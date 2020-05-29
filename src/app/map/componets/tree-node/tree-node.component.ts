@@ -12,9 +12,9 @@ export class TreeNodeComponent implements OnInit,AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('1',this.nodes)
+    // console.log('1',this.nodes)
   }
   ngAfterViewInit(){
-    console.log('node', this.nodes)
+    // console.log('node', this.nodes)
   }
 }

@@ -1,9 +1,12 @@
 <div
   class="entry"
   [class.sole]="nodes.length == 1"
+ 
   *ngFor="let res of nodes"
 >
-  <span class="label">
+  <span class="label" 
+  [class.reverse]="res.status == 'start'"
+  >
     
     <span > {{ res.name }} </span>
   </span>
