@@ -7,6 +7,7 @@ import { BattleModule } from './battle';
 import { AppRoutingModule } from './app-routing.module';
 import { MapModule } from './map';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BattleModule,
     MapModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

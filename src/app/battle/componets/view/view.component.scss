@@ -1,45 +1,76 @@
+.battle-view {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px black solid;
 
-.battle-view{
-    width:50%;
-    margin:0 auto;
-    border:1px black solid;
+  .top {
+    height: 12em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
 
-    .top{
-        height: 12em;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .middle{
-        height: 10em;
-        text-align: center;
-        border:1px black solid;
-    }
-    .foot{
-        height: 20em;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-end;
-    }
+  .middle {
+    height: 10em;
+    text-align: center;
+    border: 1px black solid;
+  }
+
+  .foot {
+    height: 20em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
 }
 
 
 .cdk-drag-preview {
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-                0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.test {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+.wrapper {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border: 1px solid blue;
+
+  .arrow {
+    position: relative;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: transparent transparent red transparent;
   }
-  
-  .cdk-drag-placeholder {
-    opacity: 0;
-  }
-  
-  .cdk-drag-animating {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
+}
+
+.column {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}

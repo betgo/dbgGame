@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewComponent } from './componets';
 import { ProductModule } from '../product';
+import { SharedModule } from '../shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -10,6 +12,7 @@ import { ProductModule } from '../product';
   imports: [
     CommonModule,
     ProductModule,
+    SharedModule
   ],
   exports: [
     ViewComponent,
