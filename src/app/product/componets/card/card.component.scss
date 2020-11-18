@@ -4,12 +4,16 @@
   grid-template-rows: 20px 90px 90px;
   border: 1px black solid;
   box-sizing: border-box;
-   margin: 0 2px;
-   &:hover{ color: red;}
+  margin: 0 2px;
+
+  &:hover {
+    color: red;
+  }
+
   .card-head {
     font-size: 0.3em;
     text-align: center;
-   
+
     box-sizing: border-box;
     margin: 0;
   }
@@ -17,6 +21,13 @@
   .card-cost {
     border: 1px black solid;
     float: left;
+    font-size: 13px;
+    width: 17px;
+    border-radius: 100%;
+  }
+
+  .card-text {
+    font-size: 13px;
   }
 
   .card-view {

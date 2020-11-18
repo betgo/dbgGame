@@ -21,9 +21,12 @@ export class ViewComponent implements OnInit {
     'Brush teeth',
     'Take a shower',
   ];
+  inputValue = '';
   selectCard: Card;
   selectMonster = '';
 
+  newEnergy = 3;
+  totalEnergy = 3;
   cards: Card[] = [];
   constructor() { }
 
@@ -103,7 +106,7 @@ export class ViewComponent implements OnInit {
 
                 {
                   // @ts-ignore
-                  if (m.clientX - 40 > rect.left && m.clientX +40 < rect.right) {
+                  if (m.clientX - 40 > rect.left && m.clientX + 40 < rect.right) {
                     return true;
                   } else {
                     return false;

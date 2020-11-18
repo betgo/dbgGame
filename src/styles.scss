@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
 .tree {
-   $tree-color: black;
+  $tree-color: black;
   $horizontal-gutter: 50px;
   $border-radius: 10px;
   $entry-min-height: 45px;
@@ -8,7 +9,7 @@
   $label-height: 25px;
   $label-border-radius: 5px;
 
-  
+
   *,
   *:before,
   *:after {
@@ -16,115 +17,127 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
- 
+
   #wrapper {
     position: relative;
   }
-  .branch{
-      position: relative;
-      margin-left: $horizontal-gutter + $label-width;
-      &:before {
-        content: "";
-        width: $horizontal-gutter / 2;
-        border-top: 1px solid $tree-color;
-        position: absolute;
-        left: -$horizontal-gutter;
-        top: 50%;
-        margin-top: 1px;
-      }
+
+  .branch {
+    position: relative;
+    margin-left: $horizontal-gutter + $label-width;
+
+    &:before {
+      content: "";
+      width: $horizontal-gutter / 2;
+      border-top: 1px solid $tree-color;
+      position: absolute;
+      left: -$horizontal-gutter;
+      top: 50%;
+      margin-top: 1px;
+    }
   }
 
   .entry {
-      position: relative;
-      min-height: $entry-min-height;
-    &:before{
-        content: "";
-        height: 100%;
-        border-left: 1px solid $tree-color;
-        position: absolute;
-        left: -($horizontal-gutter / 2);
+    position: relative;
+    min-height: $entry-min-height;
+
+    &:before {
+      content: "";
+      height: 100%;
+      border-left: 1px solid $tree-color;
+      position: absolute;
+      left: -($horizontal-gutter / 2);
     }
-    &:after{
-        content: "";
-        width: $horizontal-gutter / 2;
-        border-top: 1px solid $tree-color;
-        position: absolute;
-        left: -($horizontal-gutter / 2);
-       top: 50%;
-       margin-top: 1px;
+
+    &:after {
+      content: "";
+      width: $horizontal-gutter / 2;
+      border-top: 1px solid $tree-color;
+      position: absolute;
+      left: -($horizontal-gutter / 2);
+      top: 50%;
+      margin-top: 1px;
     }
-    &:first-child{
-        &::before{
-            width: $border-radius;
-            height: 50%;
-            top: 50%;
-            margin-top: 2px;
-            border-radius: $border-radius 0 0 0 ;
-        }
-        &::after{
-            height: $border-radius;
-            border-radius: $border-radius 0 0 0;
-        }
-    }
-    &:last-child{
-        &::before{
-            width: $border-radius;
-            height: 50%;
-            border-radius: 0 0 0 $border-radius;
-        }
-        &::after{
-            height: $border-radius;
-            border-top: none;
-            border-bottom: 1px solid $tree-color;
-            border-radius: 0 0 0 $border-radius;
-            margin-top: -$border-radius + 1px;
-        }
-    }
-    &.sole {
-        &:before {
-          display: none;
-        }
-        &:after {
-          width: $horizontal-gutter / 2;
-          height: 0;
-          margin-top: 1px;
-          border-radius: 0;
-        }
+
+    &:first-child {
+      &::before {
+        width: $border-radius;
+        height: 50%;
+        top: 50%;
+        margin-top: 2px;
+        border-radius: $border-radius 0 0 0;
       }
-  }
-  .reverse{
-    &:before{
-        content: "";
-        height: 100%;
-        margin-top: -1px;
-        border-right: 1px solid red;
-        position: absolute;
-        width: $label-width;
-        left: ($horizontal-gutter / 2);
+
+      &::after {
+        height: $border-radius;
+        border-radius: $border-radius 0 0 0;
+      }
     }
-    &::after{
-        content: "";
-        width: $horizontal-gutter / 2 ;
-        border-top: 1px solid red;
-        position: absolute;
-        left:  $label-width;
-       top: 50%;
-       margin-top: -1px;
+
+    &:last-child {
+      &::before {
+        width: $border-radius;
+        height: 50%;
+        border-radius: 0 0 0 $border-radius;
+      }
+
+      &::after {
+        height: $border-radius;
+        border-top: none;
+        border-bottom: 1px solid $tree-color;
+        border-radius: 0 0 0 $border-radius;
+        margin-top: -$border-radius + 1px;
+      }
+    }
+
+    &.sole {
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        width: $horizontal-gutter / 2;
+        height: 0;
+        margin-top: 1px;
+        border-radius: 0;
+      }
     }
   }
 
-  .label{
-      font-weight: 600;
-      display: block;
-      min-width: $label-width;
-      padding: 5px 10px;
-      line-height: $label-height -5px*2;
-      text-align: center;
-      border: 1px solid $tree-color;
-      border-radius: $label-border-radius;
+  .reverse {
+    &:before {
+      content: "";
+      height: 100%;
+      margin-top: -1px;
+      border-right: 1px solid red;
       position: absolute;
-      left: 0;
+      width: $label-width;
+      left: ($horizontal-gutter / 2);
+    }
+
+    &::after {
+      content: "";
+      width: $horizontal-gutter / 2;
+      border-top: 1px solid red;
+      position: absolute;
+      left: $label-width;
       top: 50%;
-      margin-top: -($label-height/2);
+      margin-top: -1px;
+    }
+  }
+
+  .label {
+    font-weight: 600;
+    display: block;
+    min-width: $label-width;
+    padding: 5px 10px;
+    line-height: $label-height -5px*2;
+    text-align: center;
+    border: 1px solid $tree-color;
+    border-radius: $label-border-radius;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -($label-height/2);
   }
 }

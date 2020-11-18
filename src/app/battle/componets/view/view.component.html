@@ -1,27 +1,29 @@
 <div class="battle-view">
-  <div class="top"  
+  <div class="top">
+    <app-monster *ngFor="let monster of monsters;let i=index" style="height:100% " [id]="i"
+      (mouseenter)="mouseEnter($event)" (mouseleave)="mouseLeave()">
+      {{monster}}
+    </app-monster>
 
-   >
-    <app-monster 
-     *ngFor="let monster of monsters;let i=index" style="height:100% " [id]="i" 
-        (mouseenter)="mouseEnter($event)" (mouseleave)="mouseLeave()"> 
-        {{monster}}
-    </app-monster
-    >
-   
   </div>
   <div class="middle" id="middle">
-    <div class="test"  id="test">test</div>
+
+    <textarea rows="4" nz-input [(ngModel)]="inputValue"></textarea>
+
+    <button class="end" nz-button nzType="primary" nzDanger>结束</button>
+
+    <!-- <div class="test"  id="test">test</div>
     <div class="wrapper" id="wrapper">
       <div class="arrow" id="arrow"></div>
     </div>
-    <div class="column" id="column"></div>
+    <div class="column" id="column"></div> -->
   </div>
-  <div class="foot"
-    cdkDropList
-    #todoList="cdkDropList"
-    [cdkDropListConnectedTo]="[doneList]"
+  <div class="status_bar">
+    <div class="energy">{{newEnergy}}/{{totalEnergy}}</div>
+  </div>
+  <div class="foot" cdkDropList #todoList="cdkDropList" [cdkDropListConnectedTo]="[doneList]"
     (cdkDropListDropped)="drop($event)">
+
     <app-card class="example-box" *ngFor="let card of cards" [cardItem]="card" cdkDrag></app-card>
   </div>
 </div>

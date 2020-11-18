@@ -4,7 +4,6 @@ import { ViewComponent } from './componets';
 import { ProductModule } from '../product';
 import { SharedModule } from '../shared/shared.module';
 
-
 @NgModule({
   declarations: [
     ViewComponent,
@@ -12,7 +11,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ProductModule,
-    SharedModule
+    SharedModule,
   ],
   exports: [
     ViewComponent,
