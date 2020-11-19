@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
     "ng-zorro-antd": "^9.3.0",
+    "poisson-disk-sampling": "^2.2.2",
     "rxjs": "~6.5.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.10.3"
